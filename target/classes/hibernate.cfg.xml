@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library</property>
+
+        <!--Replace with your MySQL username and password-->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">30011976?Xx</property>
+
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+
+        <!-- Map Java Class to DB Entity-->
+        <mapping class="app.model.Carte"/>
+        <mapping class="app.model.Autor"/>
+        <mapping class="app.model.Bibliotecara"/>
+        <mapping class="app.model.Contract"/>
+        <mapping class="app.model.Departament"/>
+        <mapping class="app.model.Imprumutor"/>
+        <mapping class="app.model.Responsabildepartament"/>
+
+
+    </session-factory>
+</hibernate-configuration>
